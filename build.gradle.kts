@@ -1,7 +1,7 @@
 import kotlin.String
 
 val koinVersion: String by project
-val ktorVersion: String by project
+val mockitoVersion: String by project
 
 plugins {
     kotlin("jvm") version "2.0.21"
@@ -20,6 +20,9 @@ dependencies {
     implementation("io.insert-koin:koin-core")
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")
+    testImplementation("io.insert-koin:koin-test-junit5:$koinVersion")
+    testImplementation("org.mockito.kotlin:mockito-kotlin:$mockitoVersion")
+
 }
 
 tasks.test {
